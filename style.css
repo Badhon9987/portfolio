@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* navbar section */
+
+nav{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 60px;
+    border-bottom: 2px solid grey;
+}
+nav .menu-btn{
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+nav ul li{
+    margin:0 25px ;
+}
+nav .logo{
+    font-size: 30px;
+    font-weight: bolder;
+    color: black;
+    cursor: pointer;
+}
+nav ul li a:hover{
+    padding: 12px 10px;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+#click{
+    display: none;
+}
+
+/* navbar section end  */
+
+
+/* animation section */
+.dynamic-text{
+      margin-left: 5px;
+      height: 100px;
+      line-height: 110px;
+      overflow: hidden;    
+}
+.dynamic-text li{
+    margin-bottom: 12px;
+    list-style: none;
+    font-size: 40px;
+    color: #f85353;
+    font-weight: 600;
+    position: relative;
+    top: 0;
+    animation:slide 6s steps(4)infinite;
+    
+}
+@keyframes slide {
+    100%{
+        top:-495px;
+    }
+}
+.dynamic-text li span{
+    position: relative;
+    color: #ff2a00fd;
+}
+.dynamic-text li span::after{
+    content: "";
+    position:absolute ;
+    left: 0;
+    height: 150%;
+    width: 100%;
+    background-color: white;
+    border-left: 2px solid #ff2a00fd;
+    animation: typing 1.5s steps(14)infinite;
+}
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -55px 0 55px;
+    }
+}
+/* animation section end */
+
+/* first section */
+
+.btn{
+    background-color: #ff2a00fd;
+    color: white;
+}
+
+/* first section end */
+
+/* about me section */
+.about-me{
+    background-color: #f1654923;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+.social-links{
+    font-size: 35px;
+    padding-left: 5%;
+}
+.progress-bar{
+    background-color: #ff2a00fd;
+}
+
+/* about me section end  */
+
+/* service section */
+
+.icon{
+    font-size: 40px;
+    color: #ff2a00fd;
+}
+
+.service-container{
+    padding-bottom: 5%;
+}
+.container .service-item{
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+
+/* service section end  */
+
+/* project section */
+#projects{
+    padding-bottom: 3%;
+}
+/* project section end */
+
+
+/* hire me section */
+
+.hire-me-container{
+    background-color: #ff2a00fd;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 7%;
+}
+
+/* hire me section end */
+
+
+/* mobile device responsive navbar  */
+@media(max-width: 680px){
+        nav ul{
+        position: fixed;
+        left: 100%;
+        top: 0%;
+        right: 50px;
+        background: hotpink;
+        height: 55vh;
+        width: 80%;
+        margin-left: 10%;
+        display: block;
+        text-align: center;
+        margin-top: 100px;
+        transition: all 0.3s ease;
+        z-index: 100;
+
+    }
+    #click:checked ~ ul{
+       left: 0%;
+    }
+    /* #click:checked~.menu-btn2 i::before{
+        content: ;
+    } */
+    nav ul li{ 
+        margin: 50px 0px;
+        padding-right: 20px;
+    }
+    nav .menu-btn{
+        display: block;
+        padding-right: 30px;
+    }
+}
